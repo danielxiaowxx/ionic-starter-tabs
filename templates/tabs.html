@@ -1,0 +1,30 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-color-active-positive" show-tabs="{{$root.showTabs}}">
+
+  <!-- FKC Tab -->
+  <ion-tab title="FKC" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/home">
+    <ion-nav-view name="tab-home"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Remind Tab -->
+  <ion-tab title="{{$root.i18n.remind}}" icon-off="ion-ios-alarm-outline" icon-on="ion-ios-alarm" href="#/tab/remind">
+    <ion-nav-view name="tab-remind"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Customer Tab -->
+  <ion-tab title="{{$root.i18n.customer}}" icon-off="ion-ios-people-outline" icon-on="ion-ios-people" href="#/tab/customer">
+    <ion-nav-view name="tab-customer"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Setting Tab -->
+  <ion-tab title="{{$root.i18n.setting}}" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/setting">
+    <ion-nav-view name="tab-setting"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>
+
+

@@ -1,0 +1,108 @@
+<ion-view bindonce="$root.i18n" view-title="FKC" class="home">
+
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="showSharePanel($event)">
+            <i class="button button-icon icon ion-share"></i>
+        </button>
+    </ion-nav-buttons>
+
+    <div ng-click="showToolBar(false, $event)" class="overflow-scroll has-header has-footer">
+
+        <div class="flow-row">
+            <div class="col col-25">
+                <button ng-click="openFKCHome()" class="button relative">
+                    <img class="fkc-logo" src="img/fkc-logo.png"/>
+                </button>
+                <p bo-text="$root.i18n.fkcHome"></p>
+            </div>
+            <div class="col col-25">
+                <button ng-click="openVideos()" class="button">
+                    <img class="video-logo" src="img/video-icon.png"/>
+                </button>
+                <p bo-text="$root.i18n.videoIntroduction"></p>
+            </div>
+            <div class="col col-25">
+                <button ng-click="openCertificate()" class="button">
+                    <img class="certificate-logo" src="img/certificate-icon.png"/>
+                </button>
+                <p bo-text="$root.i18n.QIntroduction"></p>
+            </div>
+            <div class="col col-25">
+                <button ng-click="openPointsSystem()" class="button">
+                    <img class="money-logo" src="img/money-icon.png"/>
+                </button>
+                <p bo-text="$root.i18n.systemIntroduction"></p>
+            </div>
+            <div class="col col-25">
+                <button ng-click="openImproveReaction()" class="button">
+                    <img class="better-logo" src="img/better-icon.png"/>
+                </button>
+                <p bo-text="$root.i18n.improveReaction"></p>
+            </div>
+            <div class="col col-25">
+                <button ng-click="openCaseShare()" class="button">
+                    <img class="case-logo" src="img/case-icon.png"/>
+                </button>
+                <p bo-text="$root.i18n.caseShare"></p>
+            </div>
+            <div class="col col-25">
+                <button ng-click="openNewsChannel()" class="button">
+                    <img class="news-logo" src="img/news-icon.png"/>
+                </button>
+                <p bo-text="$root.i18n.news"></p>
+            </div>
+            <div ng-click="openTrainChannel()" class="col col-25">
+                <button class="button">
+                    <img class="train-logo" src="img/train-icon.png"/>
+                </button>
+                <p bo-text="$root.i18n.train"></p>
+            </div>
+            <div class="col col-25">
+                <button ng-click="openShoppingChannel()" class="button">
+                    <img class="shopping-logo" src="img/shopping-icon.png"/>
+                </button>
+                <p bo-text="$root.i18n.leisureMoment"></p>
+            </div>
+            <div class="col col-25">
+                <button ng-click="openSupermarketChannel()" class="button">
+                    <img class="supermarket-logo" src="img/supermarket-icon.png"/>
+                </button>
+                <p bo-text="$root.i18n.supermarket"></p>
+            </div>
+
+        </div>
+
+        <!--工具条-->
+        <img ng-click="showToolBar(true, $event)" class="cartoon" src="img/cartoon.jpg"/>
+        <div ng-show="toolBarShow" class="tool-bar">
+            <a ng-click="showToolBar(false, $event)" class="button icon ion-chevron-right button-dark"></a>
+            <a ng-click="showSharePanel($event)" class="button icon-left ion-android-share-alt button-clear button-positive" bo-text="$root.i18n.share"></a>
+            <a ng-click="showSupportPanel($event)" class="hide button icon-left ion-heart button-clear button-assertive" bo-text="$root.i18n.support"></a>
+        </div>
+
+    </div>
+
+    <script id="share-app-panel.html" type="text/ng-template">
+        <div class="share-app-panel" bindonce="$root.i18n">
+
+            <p bo-text="$root.i18n.shareMethod1"></p>
+            <div class="text-center">
+                <button ng-click="shareToWeChat()" class="button">
+                    <img src="img/wechat_icon.png"> <span bo-text="$root.i18n.shareToWeChat"></span>
+                </button>
+                <button ng-click="shareToQQ()" class="button qq">
+                    <img src="img/qq_icon.png"> <span bo-text="$root.i18n.shareToQQ"></span>
+                </button>
+            </div>
+
+            <hr/>
+
+            <p bo-text="$root.i18n.shareMethod2"></p>
+            <p class="text-center">
+                <img src="img/app-QR-code.png">
+            </p>
+
+        </div>
+    </script>
+
+</ion-view>

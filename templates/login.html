@@ -1,0 +1,48 @@
+<ion-modal-view ng-controller="LoginCtrl" bindonce="$root.i18n" class="login">
+
+    <div class="content">
+
+        <h4 class="text-center">{{tip}}</h4>
+
+        <div class="text-center password">
+            <i ng-class="{'ion-ios-circle-outline': inputNumbers[0] === undefined, 'ion-ios-circle-filled': inputNumbers[0] !== undefined}"></i>
+            <i ng-class="{'ion-ios-circle-outline': inputNumbers[1] === undefined, 'ion-ios-circle-filled': inputNumbers[1] !== undefined}"></i>
+            <i ng-class="{'ion-ios-circle-outline': inputNumbers[2] === undefined, 'ion-ios-circle-filled': inputNumbers[2] !== undefined}"></i>
+            <i ng-class="{'ion-ios-circle-outline': inputNumbers[3] === undefined, 'ion-ios-circle-filled': inputNumbers[3] !== undefined}"></i>
+        </div>
+
+        <div class="button-container">
+
+            <div class="row">
+                <div class="col"><button on-tap="inputPassword(1)" class="button">1</button></div>
+                <div class="col"><button on-tap="inputPassword(2)" class="button">2</button></div>
+                <div class="col"><button on-tap="inputPassword(3)" class="button">3</button></div>
+            </div>
+
+            <div class="row">
+                <div class="col"><button on-tap="inputPassword(4)" class="button">4</button></div>
+                <div class="col"><button on-tap="inputPassword(5)" class="button">5</button></div>
+                <div class="col"><button on-tap="inputPassword(6)" class="button">6</button></div>
+            </div>
+
+            <div class="row">
+                <div class="col"><button on-tap="inputPassword(7)" class="button">7</button></div>
+                <div class="col"><button on-tap="inputPassword(8)" class="button">8</button></div>
+                <div class="col"><button on-tap="inputPassword(9)" class="button">9</button></div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button ng-if="cancelText" on-tap="cancel()" class="button button-clear button-positive">{{cancelText}}</button>
+                </div>
+                <div class="col"><button  on-tap="inputPassword(0)" class="button">0</button></div>
+                <div class="col">
+                    <button on-tap="removeInput()" class="button button-clear button-positive" bo-text="$root.i18n.delete"></button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</ion-modal-view>

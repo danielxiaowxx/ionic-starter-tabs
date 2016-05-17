@@ -1,0 +1,45 @@
+<ion-view bindonce="$root.i18n" view-title="{{$root.i18n.setting}}" class="settings" cache-view="false">
+  <div class="overflow-scroll has-header has-footer">
+    <div class="list">
+      <a class="item item-icon-right" href="#/tab/setting/remind-rules">
+        <span bo-text="$root.i18n.remindSetting"></span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" on-tap="selectLanguage()" href="javascript:;">
+        <span bo-text="settings.language.display"></span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <div class="item item-toggle">
+        <span bo-text="$root.i18n.passwordProtection"></span>
+        <label class="toggle">
+          <input ng-change="openProtection(settings.protectionUp)" ng-model="settings.protectionUp" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+
+      <!--<div class="item item-divider"></div>-->
+
+      <!--<a class="item" href="javascript:;" bo-text="$root.i18n.feedback">-->
+      <!--</a>-->
+      <!--<a class="item" href="javascript:;" bo-text="$root.i18n.supportApp">-->
+      <!--</a>-->
+
+      <div class="item item-divider"></div>
+
+      <a class="item item-icon-right" on-tap="importCustomers()" href="javascript:;">
+        <span bo-text="$root.i18n.importCustomers"></span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" on-tap="cloudSyncData()" href="javascript:;">
+        <span bo-text="$root.i18n.syncData"></span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <a class="item item-icon-right" href="#/tab/setting/about">
+        <span bo-text="$root.i18n.aboutApp"></span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</ion-view>

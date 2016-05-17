@@ -1,0 +1,31 @@
+<ion-view ng-controller="SettingAboutCtrl" bindonce="$root.i18n" view-title="{{$root.i18n.aboutApp}}" cache-view="false" class="about">
+
+    <div class="overflow-scroll has-header">
+
+        <div class="padding text-center">
+
+            <br/><br/>
+
+            <div class="text-center">
+                <img class="logo" src="img/app-icon.png" />
+
+                <p>v1.5.8</p>
+            </div>
+
+            <span bo-text="$root.i18n.producer"></span>：Daniel.xiao (爱心玮业)
+
+            <div class="introduce">
+                <button ng-click="openIntroduce()" class="button button-clear">
+                    <h4 bo-text="$root.i18n.appPresentation"></h4>
+                </button>
+                <p class="hr"></p>
+                <button ng-click="openInstruction()" class="button button-clear">
+                    <h4 bo-text="$root.i18n.instructionManual"></h4>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</ion-view>

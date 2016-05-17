@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <!--build:css css/ionic.app.min.css-->
+  <link href="css/ionic.app.css" rel="stylesheet">
+  <!--/build-->
+
+  <script>
+    // 用户行为分析统计talkingdata
+    // 这里是测试appid，当release的时候会把该测试appid替换成正式的appid
+    var appid = 'EA77537D220B6526248515426AF68F27'; // TODO
+  </script>
+
+  <!--build:js js/lib.min.js-->
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="lib/lodash/lodash.min.js"></script>
+  <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+  <script src="lib/angular-local-storage/dist/angular-local-storage.min.js"></script>
+  <script src="lib/angular-md5/angular-md5.min.js"></script>
+  <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+  <script src="lib/talkingdata/sdk.min.js"></script>
+  <script src="lib/stacktrace/dist/stacktrace.min.js"></script>
+  <script src="lib/ionic-scroll-sista/dist/ionic.scroll.sista.min.js"></script>
+  <script src="lib/ion-image-lazy-load/ionic-image-lazy-load.js"></script>
+  <!--/build-->
+
+  <!--build:js js/i18n.min.js-->
+  <script src="js/i18n/en.js"></script>
+  <script src="js/i18n/zh_cn.js"></script>
+  <script src="js/i18n/zh_hk.js"></script>
+  <!--/build-->
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!--build:js js/controller.min.js-->
+  <script src="js/controllers/app-ctrl.js"></script>
+  <script src="js/controllers/login-ctrl.js"></script>
+  <script src="js/controllers/register-ctrl.js"></script>
+  <script src="js/controllers/setting-ctrl.js"></script>
+  <script src="js/controllers/setting-about-ctrl.js"></script>
+  <script src="js/controllers/setting-language-selector-ctrl.js"></script>
+  <script src="js/controllers/home-ctrl.js"></script>
+  <!--/build-->
+
+  <!--build:js js/service.min.js-->
+  <script src="js/services/common-service.js"></script>
+  <script src="js/services/modal-service.js"></script>
+  <script src="js/services/services.js"></script>
+  <script src="js/services/rest-service.js"></script>
+  <script src="js/services/start-service.js"></script>
+  <script src="js/services/exception-service.js"></script>
+  <!--/build-->
+
+  <!--build:js js/directive.min.js-->
+  <script src="js/directive.js"></script>
+  <!--/build-->
+
+  <!--build:js js/filter.min.js-->
+  <script src="js/filter.js"></script>
+  <!--/build-->
+
+  <!--build:js js/app.min.js-->
+  <script src="js/app.js"></script>
+  <!--/build-->
+
+</head>
+<body ng-controller="AppCtrl">
+<!--
+  The nav bar that will be updated as we navigate between views.
+-->
+<ion-nav-bar class="bar-light">
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
+<!--
+  The views will be rendered in the <ion-nav-view> directive below
+  Templates are in the /templates folder (but you could also
+  have templates inline in this html file if you'd like).
+-->
+<ion-nav-view></ion-nav-view>
+</body>
+</html>

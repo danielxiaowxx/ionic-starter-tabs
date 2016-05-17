@@ -1,0 +1,30 @@
+<ion-modal-view ng-controller="RegisterCtrl" bindonce="$root.i18n" class="register">
+
+    <div class="bar bar-header">
+        <h1 class="title" bo-text="$root.i18n.welcomeToApp"></h1>
+    </div>
+
+    <div class="content has-header">
+        <form name="registerForm">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input required ng-model="name" type="text" placeholder="{{$root.i18n.yourName}}">
+                </label>
+                <label class="item item-input">
+                    <input required ng-model="vipNo" type="tel" placeholder="{{$root.i18n.yourVIP}}">
+                </label>
+            </div>
+
+            <div class="padding">
+                <button ng-click="submit()" ng-disabled="registerForm.$invalid" class="button button-block button-positive" bo-text="$root.i18n.submit"></button>
+            </div>
+
+            <p class="padding">
+                <i class="ion-happy-outline energized"></i>
+                <span bo-text="$root.i18n.registerTip"></span>
+            </p>
+        </form>
+
+    </div>
+
+</ion-modal-view>
